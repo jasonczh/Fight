@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_withe"
+    android:orientation="vertical">
+
+   <!--<include layout="@layout/title_layout"/>-->
+    <!-- 之后要改成wrap_content 因为没有图片素材-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/sign_in_icon_background"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_gravity="center"
+            android:id="@+id/sign_in_cImg"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/sign_in_icon"
+            app:civ_border_color="@color/grey_withe"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/sign_in_update_tv"
+            android:layout_marginLeft="25dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sign_in_update_pic_btn"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="上传头像"
+            android:textColor="@color/pure_withe"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sing_in_icon_border"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用  户  名："
+                android:textColor="@color/primary_text"
+                android:textSize="18sp" />
+
+            <com.example.jason.fight.ui.widget.ClearEditText
+                android:id="@+id/sign_in_user"
+                android:layout_width="match_parent"
+                style="@style/MyCustomEditText"
+                android:background="@null"
+                android:hint="字母/数字/中文"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sing_in_icon_border"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵        称："
+                android:textColor="@color/primary_text"
+                android:textSize="18sp" />
+
+            <com.example.jason.fight.ui.widget.ClearEditText
+                android:id="@+id/sign_in_nickname"
+                android:layout_width="match_parent"
+                style="@style/MyCustomEditText"
+                android:background="@null"
+                android:hint="字母/数字/中文"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sing_in_icon_border"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="密        码："
+                android:textSize="18sp" />
+
+            <com.example.jason.fight.ui.widget.ClearEditText
+                android:id="@+id/sign_in_passwd"
+                android:layout_width="match_parent"
+                style="@style/MyCustomEditText"
+                android:singleLine="true"
+                android:background="@null"
+                android:hint="6-20位密码"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:password="true"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sing_in_icon_border"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="确认密码："
+                android:textSize="18sp" />
+
+            <com.example.jason.fight.ui.widget.ClearEditText
+                android:id="@+id/sign_in_passwd_conf"
+                android:layout_width="match_parent"
+                style="@style/MyCustomEditText"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:singleLine="true"
+                android:hint="请再次输入密码"
+                android:inputType="textPassword"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sing_in_icon_border"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="手机号码："
+                android:textSize="18sp" />
+
+            <com.example.jason.fight.ui.widget.ClearEditText
+                android:id="@+id/sign_in_phone"
+                android:layout_width="match_parent"
+                style="@style/MyCustomEditText"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:singleLine="true"
+                android:hint="手机号码"
+                android:inputType="phone"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sing_in_icon_border"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="邮        箱："
+                android:textSize="18sp" />
+
+            <com.example.jason.fight.ui.widget.ClearEditText
+                android:id="@+id/sign_in_email"
+                android:layout_width="match_parent"
+                style="@style/MyCustomEditText"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:singleLine="true"
+                android:hint=" E-mail"
+                android:inputType="textEmailAddress"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/sign_in_register"
+        android:layout_margin="8dp"
+        android:background="@drawable/sign_in_register_btn"
+        android:text="注册"
+        android:textColor="@color/pure_withe"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
